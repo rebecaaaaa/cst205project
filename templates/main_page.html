@@ -1,15 +1,87 @@
+<!-- Stephanie Hernandez, Rebeca Chavez, Alexia Leon -->
+<!-- CST-205 -->
+<!-- created on 05/09/21 -->
+<!-- Description: Using Bootstrap and Jinja2, we are able to format our flask page. -->
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BeeConnected </title>
-</head>
-Menu
-<body>
-Careers
-<b>
-Resources
-<b>
-Connect
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{ bootstrap.load_css() }}
+        <title>Main Page</title>
+        <style>
+            body{
+                background-color: rgb(247, 158, 202);
+            }
+            h1{
+                text-align: center;
+            }
+            .container{
+                width: 20%;
+                height: 100%;
+                float: left;
+                padding-left: 60px;
+            }
+            .info{
+                width:70%;
+                float: right;
+                padding-bottom: 60px;
+            }
+            img{
+                width:20%;
+                float: left;
+            }
+            p{
+                width: 75%;
+                padding-left: 10px;
+                padding-right: 30px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1>Main Page</h1>
+        <br>
+        <br>
+        <div class="container">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="{{ url_for('mp') }}">Careers</a></li>
+                <li><a href="{{ url_for('mp') }}">Resources</a></li>
+                <li><a href="{{ url_for('mp') }}">Connect</a></li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <h3>About Us:</h3>
+            <img src= "/static/images/me.jpeg">
+            <p>
+                Hello, My name is Stephanie Hernandez. I'm currently a first 
+                year student at Hartnell College and California State University 
+                of Monterey Bay (CSUMB). I'm studying Computer Science, and I'm
+                glad to be collaborating with my other team members to build
+                this page for fellow STEM majors in hopes of broadening your
+                careers, resources, and connections.
+            </p>
+        </div>
+        <div class="info">
+            <img src= "/static/images/IMG_3054.jpeg">
+            <p>
+                Hey y'all! My name is Rebeca, and I'm a Computer Science major at CSUMB.
+                I am passionate about using my skills for the greater good, especially in education.
+                That is why my awesome teammates and I have worked super hard to make this site available for
+                all of you hot girlz! I hope all of you get to use it for your hot girl summer careerz. 
+            </p>
+        </div>
+        <div class="info">
+            <img src= "/static/images/IMG_3054.jpeg">
+            <p>
+                Hey, I'm hajdhbf hjkegwfk qfwfef. Hey, I'm hajdhbf hjkegwfk qfwfef.
+                Hey, I'm hajdhbf hjkegwfk qfwfef. Hey, I'm hajdhbf hjkegwfk qfwfef.
+                Hey, I'm hajdhbf hjkegwfk qfwfef. Hey, I'm hajdhbf hjkegwfk qfwfef.
+            </p>
+        </div>
+    </body>
 </html>
