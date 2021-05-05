@@ -13,7 +13,6 @@
 ##Date: Apr. 28th 2021
 ##Estimate: 20 Hours
 
-from image_info import image_info
 from flask import Flask, render_template
 from  flask_bootstrap import Bootstrap
 from PIL import Image
@@ -27,16 +26,16 @@ bootstrap = Bootstrap(app)
 # creating route for main page, will display the images of authors + biography + links to other pages
 @app.route('/') ## all authors will collobarate on main page 
 def mp(): 
-    return render_template()
+    return render_template('main_page.html')
 
-@app.route('/careerPage/<linkClicked>') ## career page = Rebeca 
-def cp(): 
-    return render_template()
+# @app.route('/careerPage/<linkClicked>') ## career page = Rebeca 
+# def cp(): 
+#     return render_template()
 
-@app.route('/resourcePage/<linkClicked>') ## resource page = 
-def cp(): 
-    return render_template()
+# @app.route('/resourcePage/<linkClicked>') ## resource page = 
+# def cp(): 
+#     return render_template()
 
-@app.route('/connectPage/<linkClicked>') ## connect page = 
-def cp(): 
-    return render_template()
+# @app.route('/connectPage/<linkClicked>') ## connect page = 
+# def cp(): 
+#     return render_template()
