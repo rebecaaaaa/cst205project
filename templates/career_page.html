@@ -1,11 +1,80 @@
+<!--Title: career_page.html 
+    Author: Rebeca Chavez
+    Class: CST 205
+    Prof: Avner Biblarz
+    CST 205 Final Project 
+    Abstract: Career Page Template, will include external links to available internships/scholarships for women in STEM --> 
+
+<!doctype html>
 <html lang="en">
-<header>
-    H0T GirLZ Careers
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{ bootstrap.load_css() }}
+        <title>Hot Girls Careerz</title>
+        <style>
+            body{
+                background-color: rgb(229, 184, 255);
+            }
+            h1{
+                text-align: center;
+            }
+            .container{
+                width: 20%;
+                height: 100%;
+                float: left;
+                padding-left: 60px;
+            }
+            .info{
+                width:70%;
+                float: right;
+                padding-bottom: 60px;
+            }
+            img{
+                width:20%;
+                float: left;
+            }
+            p{
+                width: 75%;
+                padding-left: 10px;
+                padding-right: 30px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1> Careers 4 You </h1>
+        <div class="container">
+            <h2> Internships! </h2>
+            <!-- urls for internships #1 -->
+            <ul>
+                <li> Internship #1 </li>
+                <br>
+                <li> Internship #2 </li>
+                <br>
+                <li> Internship #3 </li>
+                <br>
+                <li> Internship #4 </li>
+                <br>
+                <li> Internship #5 </li>
+            </ul>
+        </div>
+        <div class="info">
+            <h3>Scholarships!</h3>
+            <!-- urls for scholarships #1 -->
+            <ul>
+                <li> Scholarship #1 </li>
+                <br>
+                <li> Scholarship #2 </li>
+                <br>
+                <li> Scholarship #3 </li>
+                <br>
+                <li> Scholarship #4 </li>
+                <br>
+                <li> Scholarship #5 </li>
+            </ul>
+        </div>
+    </body>
 </html>
+          

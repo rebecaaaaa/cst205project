@@ -28,9 +28,9 @@ bootstrap = Bootstrap(app)
 def mp(): 
     return render_template('main_page.html')
 
-# @app.route('/careerPage/<linkClicked>') ## career page = Rebeca 
-# def cp(): 
-#     return render_template()
+@app.route('/careerPage/<linkClicked>') ## career page = Rebeca 
+def cp(): 
+    return render_template('career_page.html')
 
 # @app.route('/resourcePage/<linkClicked>') ## resource page = 
 # def cp(): 
