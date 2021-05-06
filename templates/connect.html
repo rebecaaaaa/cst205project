@@ -1,0 +1,129 @@
+<!-- Title: page4.html  -->
+<!-- Author: Stephanie Hernandez -->
+<!-- Class: CST 205 -->
+<!-- Prof: Avner Biblarz -->
+<!-- CST 205 Final Project  -->
+<!-- Abstract: Connect Page Template, will include a chance to post 
+    repos and LinkedIn info, as well as external links 
+    to available Resources for people in STEM. -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{ bootstrap.load_css() }}
+        <title>Connect Page</title>
+        <style>
+            body{
+                background-color: rgb(229, 184, 255);
+
+            }
+            h1{
+                text-align: center;
+                padding-top: 25px;
+                padding-bottom: 40px;
+            }
+            img{
+                width:30%;
+                height:20%
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .github{
+                padding-left: 20px;
+                padding-top: 45px;
+                float: left;
+                width:30%;
+            }
+            .githubBlock{
+                float: right;
+                width: 70%;
+                padding-top: 20px;
+            }
+            .resources{
+                padding-left: 20px;
+                padding-top: 320px;
+            }
+            .resources h1{
+                padding-top: 75px;
+                text-align: left;
+            }
+            .resources img{
+                width:15%;
+                height:10%;
+                padding-right: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <p><a href="{{ url_for('mp') }}"> Back to Main Page </a></p>
+            <h1>Welcome to the Connect Page!</h1>
+
+            <img src="/static/images/linkedin.png" class="center" width =50% alt="LinkedInLogo">
+            {% block content %}
+            <div class="container mb-4">  
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Add your LinkedIn!</h2>
+                        <form method="POST" action="/">
+                            {{ form.csrf_token }}
+                            {{ form.name.label }} 
+                            {{ form.name(size=32) }}
+                            <br>
+                            {{ form.occupation.label }} 
+                            {{ form.occupation(size=32) }}
+                            <br>
+                            {{ form.link.label }} 
+                            {{ form.link(size=32) }}
+                            <br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="/static/images/github.png" class="github" alt="GitHubLogo">
+            <div class="githubBlock">
+                <div class="container mb-4">  
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Add your Repos!</h2>
+                            <form method="POST" action="/">
+                                {{ form2.csrf_token }}
+                                {{ form2.name.label }} 
+                                {{ form2.name(size=32) }}
+                               <br>
+                                {{ form2.project.label }} 
+                               {{ form2.project(size=32) }}
+                               <br>
+                               {{ form2.description.label }} 
+                               {{ form2.description(size=32) }}
+                               <br>
+                               {{ form2.link.label }} 
+                               {{ form2.link(size=32) }}
+                               <br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+            </div>
+            <div class="resources">
+                <h1>Resources: </h1>
+                <a href="https://www.indeed.com/"><img src="static/images/indeed.png"></a>
+                <a href="https://ripplematch.com/"><img src="static/images/rm.png"></a>
+                <a href="https://slack.com/"><img src="static/images/slack.png"></a>
+                <a href="https://www.linkedin.com/"><img src="static/images/linkedin.png"></a>
+                <a href="https://github.com/"><img src="static/images/github.png"></a>
+                <br>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>
