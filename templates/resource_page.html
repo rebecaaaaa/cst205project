@@ -46,7 +46,7 @@
             input {
                 all: unset;
                 font:16px;
-                color:rgb(228, 183, 228) ;
+                color:rgb(92, 20, 92) ;
                 height: 100%;
                 width: 100%;
                 padding: 6px 10px;
@@ -64,6 +64,16 @@
         <div class="container">
             <br>
             <p><a href="{{url_for('mp')}}"> Back to Main Page </a></p>
+            <br>
+            <br>
+            <form id="form" role="search">
+                <input type="search" id="query" name="q"
+                 placeholder="Search..."
+                 aria-label="Search through site content">
+                <button>Search</button>
+              </form>  
+            <br>
+            <br>
             <h1>Tech Events:</h1>
             <!--List of Tech Events w/ urls-->
             <ul>
