@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    	{% block head %}
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	{% block styles %}
+        {{ bootstrap.load_css() }}
+    	{% endblock %}
+    	<title> Jobs Database </title>
+      	<style>
+        	body {
+        		background-color: rgb(199, 163, 255);
+        	}
+      	</style>
+    	{% endblock %}
+  	</head>
+	<body>
+		{% block content %}
+    	<div class="container mb-4">  
+    		<div class="card mt-4">
+        		<div class="card-body">
+          			<h2 class="card-title;"
+            		style = "color:rgb(113, 65, 190); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" > !Jobs available for the Hot Girlies! </h2>
+          			<ul class="list-group">
+            			{% for item in job_info_data %}
+              			<li class="list-group-item">
+                			Position: {{ item.position }} 
+                			<br>
+                			Description: {{ item.description }}
+                			<br>
+                			Link: {{ item.link }}
+                			<br>
+                			Recruitor Contact Info: {{item.info}}
+                			<br>
+              			</li>
+            			{% endfor %}
+          			</ul>
+        		</div>
+			<div class="card-footer">
+                <a href="{{ url_for('mp') }}" class="card-link">Take me back to the Hot Girlz Main Page!</a>
+            </div>
+        </div>
+  		{% endblock %}
+	</body>
+</html>

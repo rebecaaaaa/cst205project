@@ -30,6 +30,24 @@ bootstrap = Bootstrap(app)
 # behind the scences of csrf.token in html
 app.config['SECRET_KEY'] = 'csumb-proj'
 
+class employeeForm(FlaskForm):
+    job_position = StringField(
+        'Position Title:',
+        validators=[DataRequired()]
+    )
+    job_description = StringField(
+        'Job Description:',
+        validators=[DataRequired()]
+    )
+    job_link = StringField(
+        'Link to Job Application:',
+        validators=[DataRequired()]
+    )
+    recruitor_info = StringField(
+        'Please write contact Info (phone or email):',
+        validators=[DataRequired()]
+    )
+
 # Connect Page Logic
 class LinkedIn(FlaskForm):
     name = StringField(
@@ -63,8 +81,17 @@ class GitHub(FlaskForm):
         validators=[DataRequired()]
     )
 
+job_info_data = []
 people = []
 repos = []
+
+def store_job_info(my_position, my_description, my_link, my_info):
+    job_info_data.append(dict(
+        position = my_position,
+        description = my_description,
+        link = my_link,
+        info = my_info
+    ))
 
 def store_ppl(my_name, my_occupation, my_link):
     people.append(dict(
@@ -85,9 +112,14 @@ def store_repos(my_name, my_proj, my_descr, my_link):
 
 # creating route for main page, will display the images of authors + biography + links to other pages
 @app.route('/', methods=('GET', 'POST')) ## all authors will collobarate on main page 
-def mp(): 
+def mp():
+    jobForm = employeeForm()
     form = LinkedIn()
     form2 = GitHub()
+
+    if jobForm.validate_on_submit():
+        store_job_info(jobForm.job_position.data, jobForm.job_description.data, jobForm.job_link.data, jobForm.recruitor_info.data)
+        return redirect('/view_job_info')
 
     if form.validate_on_submit():
         store_ppl(form.name.data, form.occupation.data, form.link.data)
@@ -99,7 +131,7 @@ def mp():
     
     return render_template('main_page.html')
 
-@app.route('/careerPage') ## career page = Rebeca 
+@app.route('/careerPage', methods=('GET', 'POST')) ## career page = Rebeca 
 def cp(): 
     return render_template('career_page.html')
 
@@ -114,10 +146,20 @@ def p4():
 
     return render_template('connect.html', form=form, form2=form2)
 
+# Rebeca's Employee page
+@app.route('/employeePage', methods=('GET', 'POST'))
+def cpform():
+    employeeform = employeeForm()
+    return render_template('career_page_form.html', form=employeeform)
+# Rebeca's Job info page
+@app.route('/view_job_info')
+def viewjobinfo():
+    return render_template('view_job_database.html', job_info_data=job_info_data)
+# Stephanie's LinkedIn page
 @app.route('/view_linkedIn')
 def vppl():
     return render_template('vppl.html', people=people)
-
+# Stephanie's Github page
 @app.route('/view_gitHub')
 def vgh():
     return render_template('vgh.html', repos=repos)

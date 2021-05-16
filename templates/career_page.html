@@ -1,11 +1,11 @@
-<!--Title: career_page.html 
+<!-- Title: career_page.html 
     Author: Rebeca Chavez
     Class: CST 205
     Prof: Avner Biblarz
     CST 205 Final Project 
     Abstract: Career Page Template, will include external links to available internships/scholarships for women in STEM --> 
 
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -46,9 +46,9 @@
         <br>
         <h1> Careers 4 You </h1>
         <div class="container">
-            <h2> Internships! </h2>
+            <h2> Internships! </h2> -->
             <!-- urls for internships #1 -->
-            <ul>
+            <!-- <ul>
                 <li> Internship #1 </li>
                 <br>
                 <li> Internship #2 </li>
@@ -61,9 +61,9 @@
             </ul>
         </div>
         <div class="info">
-            <h3>Scholarships!</h3>
+            <h3>Scholarships!</h3> -->
             <!-- urls for scholarships #1 -->
-            <ul>
+            <!-- <ul>
                 <li> Scholarship #1 </li>
                 <br>
                 <li> Scholarship #2 </li>
@@ -76,5 +76,119 @@
             </ul>
         </div>
     </body>
+</html> --> 
+<!--Title: career_page.html 
+    Author: Rebeca Chavez
+    Class: CST 205
+    Prof: Avner Biblarz
+    CST 205 Final Project 
+    Abstract: Career Page Template, will include external links to available internships/scholarships for women in STEM -->
+    ​
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{ bootstrap.load_css() }}
+        <title> Hot Girls Careerz </title>
+        <style>
+            body{
+                background-color: rgb(229, 184, 255);
+            }
+            h1{
+                text-align: center;
+            }
+            .container{
+                width: 30%;
+                height: 100%;
+                float: left;
+                padding-left: 65px;
+            }
+            .info{
+                width:70%;
+                float: right;
+                padding-bottom: 60px;
+            }
+            img{
+                width:5%;
+                float: left;
+            }
+            p{
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 25px;
+                float: right;
+            }
+            .bottom{
+                position: absolute;
+                /* bottom: -325px; */
+                top: 75px;
+                left: 57px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h1 
+        style = "font-family:Verdana, Geneva, Tahoma, sans-serif; background-color: rgb(223,110,252); color:rgb(139, 8, 172);" > ! Careers 4 You !
+        </h1>
+        <br>
+        <br>
+        <div class="container">
+            <h2 style = "color:rgb(235, 4, 158); font-family:Arial, Helvetica, sans-serif" > Internships! </h2>
+            <!-- urls for internships #1 -->
+            <ul>
+                <li><a href = 'https://jobs.apple.com/en-us/details/200180413/software-engineering-internship' > Internship at Apple </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > Software Engineering internship position at Apple in Cupertino </p>
+                    <br>
+                <li><a href = "https://careers.snowflake.com/us/en/job/4867930002/Software-Engineer-Intern-Core-Engineering-Summer-2021?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" > Internship at Snowflake </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > Software Engineering internship at Snowflake, remote </p>
+                    <br>
+                <li><a href = "https://jobs.intel.com/ShowJob/Id/2806851/Network-Software-Engineer-Intern?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" > Internship at Intel </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > Software Engineering internship at Intel, Bachelor's degree required </p>
+                    <br>
+                <li><a href = "https://careers.google.com/jobs/results/85454461436076742/" > Internship at Google </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > Software Engineering internship at Google, Entry-Level welcomed </p>
+                    <br>
+                <li><a href = "https://www.splunk.com/en_us/careers/jobs/software-engineer-intern-summer-16168.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" > Internship Splunk </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > Software Engineering internship at Splunk, will be remote (virtual internship) </p>
+                    <br> 
+            </ul>
+        </div>
+        <div class="info">
+            <h3 style = "color:rgb(235, 4, 158); font-family:Arial, Helvetica, sans-serif" > Scholarships!</h3>
+            <!-- urls for scholarships #1 -->
+            <ul>
+                <li><a href= "https://form.asana.com/?d=684534227109135&k=VKBOh6Q4QP72Ap8j9mKTTQ" > LastMile Education Fund </a></li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' > 
+                        This scholarship from Last Mile provides funding for women in tech who need funding to finish 
+                        their last semester in pursuing their Bachelor's. 
+                    </p>
+                    <br>
+                <li><a href= "https://buildyourfuture.withgoogle.com/scholarships/generation-google-scholarship/" > Generation Google Scholarship </a> </li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' >
+                        This scholarship from Google provides $10,000 in funding for those pursuing a career in CS/CS engineering
+                    </p>
+                    <br>
+                <li> <a href= "https://www.palantir.com/students/scholarship/wit-north-america/" > Palantir Women in STEM Scholarship </a> </li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' >
+                        Provides funding for women in science who are pursuing a degree in CS/CS Engineering
+                    </p>
+                    <br>
+                <li> <a href= "https://form.asana.com/?d=684534227109135&k=VKBOh6Q4QP72Ap8j9mKTTQ" > Science Ambassadors Scholarship </a> </li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' >
+                        A scholarship funded by Cards Against Humanity, it funds full college tuition costs for women pursuing a degree in CS/Software Engineering
+                    </p>
+                    <br>
+                <li> <a href= "https://abcwildlife.com/about-us/women-in-stem-scholarship/" > ABC Humane Wildlife Scholarship </a> </li>
+                    <p style = 'font-family: monospace; color:rgb(143, 4, 235)' >
+                        This scholarship provides a $1000 fund for women in any STEM related field. Application deadline is July 1 2021!! 
+                    </p>
+                    <br>
+            </ul>
+            <p class="bottom"><a href="{{ url_for('mp') }}"> Take me back to the Hot Girlz Main Page! </a></p>
+            <br>
+            <br>
+        </div>
+    </body>
 </html>
-          
