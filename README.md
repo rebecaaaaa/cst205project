@@ -9,7 +9,9 @@ commands will look like this:
 export FLASK_APP=AppRoutes.py >> export FLASK_DEBUG=1 >> flask run
 Then copy and paste the link provided to your browser, and your app will be
 visible and easy to navigate through. 
+
 Link to GitHub repo: https://github.com/rebecaaaaa/cst205project.git
+
 Future Work: This project would hopefully expand to include more creative graphic design
 and extra features, such as a social networking tab for users to make posts, 
 similar to LinkedIn
