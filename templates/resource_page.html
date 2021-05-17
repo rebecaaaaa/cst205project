@@ -4,107 +4,104 @@
 <!--This is the resources page of our website. -->
 
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        {{ bootstrap.load_css() }}
-        <title> Resources </title>
-        <style>
-            *{
-                box-sizing: border-box;
-            }
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: rgb(229, 184, 255);
-            }
-            h1{
-                text-align: center;
-                padding-top: 25px;
-                padding-bottom: 40px;
-            }
-            .container{
-                width: 20%;
-                height: 100%;
-                float: left;
-                padding-left: 60px;
-            }
-            .events{
-                width:auto;
-                float: right;
-                padding-bottom: 60px;
-            }
-            form {
-                background-color: plum;
-                width: 300px;
-                height: 44px;
-                border-radius: 5px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            } 
-            input {
-                all: unset;
-                font:16px;
-                color:rgb(92, 20, 92) ;
-                height: 100%;
-                width: 100%;
-                padding: 6px 10px;
-
-            }
-        </style>
-        <form id="form" role="search">
-            <input type="search" id="query" name="q"
-             placeholder="Search..."
-             aria-label="Search through site content">
-            <button>Search</button>
-          </form>          
-    </head>
-    <body>
-        <div class="container">
-            <br>
-            <p><a href="{{url_for('mp')}}"> Back to Main Page </a></p>
-            <br>
-            <br>
-            <form id="form" role="search">
-                <input type="search" id="query" name="q"
-                 placeholder="Search..."
-                 aria-label="Search through site content">
-                <button>Search</button>
-              </form>  
-            <br>
-            <br>
-            <h1>Tech Events:</h1>
-            <!--List of Tech Events w/ urls-->
-            <ul>
-                <li> Tech Event 1</li>
-                <br>
-                <li> Tech Event 2</li>
-                <br> 
-                <li> Tech Event 3</li>
-                <br>
-                <li> Tech Event 4</li>
-                <br>
-                <li> Tech Event 5</li>
-            </ul>
-            <!--<a href= "url";-->
-            </div>
-        <div class="events">
-        <h3>Career Fairs:</h3>
-        <!--list of Career fairs w/ urls-->
-            <ul>
-                <li>  Fair 1 </li>
-                <br>
-                <li> Fair 2 </li>
-                <br>
-                <li> Fair 3 </li>
-                <br>
-                <li> Fair 4 </li>
-                <br> 
-                <li> Fair 5 </li>
-            </ul>
-        </div>
-    </body>
+  <html lang="en">
+      <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          {{ bootstrap.load_css() }}
+          <title> Resources </title>
+          <style>
+              body {
+                  font-family: Arial, Helvetica, sans-serif;
+                  background-color: rgb(229, 184, 255);
+              }
+              h1{
+                  margin:auto;
+                  text-align: center;
+                  padding-top: inherit;
+                  padding-bottom: inherit;
+                  padding: 40px;
+                  border:3px solid rgb(186,85,211);
+                  background-color:rgb(204, 153, 255);
+                  color:  rgb(75,0,130);
+                  font-size: 40px;
+              }
+              .container{
+                  margin: auto;
+                  width: 70%;
+                  text-align:center;
+                  padding-left:inherit;
+                  border:3px solid rgb(186,85,211);
+                  background-color:rgb(204, 153, 255);
+              }
+              .events{
+                  margin: auto;
+                  width: 70%;
+                  padding-bottom: inherit;
+                  padding-left: inherit;
+                  text-align: center;
+                  border:3px solid rgb(186,85,211);
+                  background-color:rgb(204, 153, 255);
 
 
-</html>
+              }
+              li{
+              	display: inline-block;
+              }
+
+          </style>
+      </head>
+      <body>
+          <br>
+          <p><a href="{{url_for('mp')}}"> Back to Hot Girlz Careerz Main Page </a></p>
+          <br>
+          <h1>Resources for You!</h1>
+          <br>
+          <br>
+          <div class="container">
+              <br>
+              <h2 style="color: rgb(75,0,130); font-size:24px;"> Tech Events</h2>
+              <!--List of Tech Events w/ urls-->
+              <ul>
+                  <li> <a href= "https://events.google.com/io/?lng=en"> Google 1/0 Event</a></li>
+                  	<p> Information:</p>
+                  <br>
+                  <li> <a href= "https://www.eventbrite.com/e/coding-for-women-by-women-live-online-tickets-146844677383"> Coding For Women By Women</a></li>
+                  	<p> Information: </p>
+                  <br>
+                  <li><a href="https://www.eventbrite.com/e/women-in-leadership-forum-the-future-of-stem-tickets-150951519057?aff=ebdssbonlinesearch"> Women in Leadership Forum: The Future of STEM</a></li>
+                  	<p> Information: </p>
+                  <br>
+                  <li> <a href="https://www.eventbrite.com/e/sisters-of-science-stem-fireside-chat-tickets-145683271587?aff=ebdssbonlinesearch&keep_tld=1">Sisters of Science STEM Fireside Chat </a></li>
+                  	<p> Information: </p>
+                  <br>
+                  <li> <a href="https://www.docker.com/dockercon-live/2021"> DockerCon LIVE 2020 </a></li>
+                  	<p> Information: </p>
+                  <br>
+              </ul>
+              <!--<a href= "url";-->
+              </div>
+              <br>
+              <br>
+          <div class="events">
+          <h3 style="color: rgb(75,0,130); font-size: 24px;"> Career Fairs</h3>
+          <!--list of Career fairs w/ urls-->
+              <ul>
+                  <li> <a href="https://www.eventbrite.com/e/scwist-job-fair-women-in-stem-registration-142770824379?aff=ebdssbonlinesearch&keep_tld=1"> Women in STEM Job Fair </a></li>
+                  	<p> Information: </p>
+                  <br>
+                  <li> <a href="https://www.aiaa.org/events-learning/event/2021/06/09/default-calendar/professional-virtual-career-fair-june-2021"> Shaping the Future of Aerospace professional Virtual Career Fair </a></li>
+                  	<p> Information: </p>
+                  <br>
+                  <li> Fair 3 </li>
+                		<p> Information:</p>
+                  <br>
+                  <li> Fair 4 </li>
+                  	<p> Information: </p>
+                  <br>
+                  <li> Fair 5 </li>
+                  	<p> Information: </p>
+              </ul>
+          </div>
+          <br>
+      </body>
