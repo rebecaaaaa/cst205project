@@ -4,8 +4,8 @@
 <!-- Prof: Avner Biblarz -->
 <!-- CST 205 Final Project  -->
 <!-- Abstract: Connect Page Template, will include a chance to post 
-    repos and LinkedIn info, as well as external links 
-    to available Resources for people in STEM. -->
+     repos and LinkedIn info, as well as external links 
+     to available Resources for people in STEM. -->
 
 <!doctype html>
 <html lang="en">
@@ -71,6 +71,7 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <h2 class="card-title">Add your LinkedIn!</h2>
+                        <!-- Form where people can input LinkedIn info -->
                         <form method="POST" action="/">
                             {{ form.csrf_token }}
                             {{ form.name.label }} 
@@ -93,6 +94,7 @@
                     <div class="card mt-4">
                         <div class="card-body">
                             <h2 class="card-title">Add your Repos!</h2>
+                            <!-- Form where people can input GitHub repo info -->
                             <form method="POST" action="/">
                                 {{ form2.csrf_token }}
                                 {{ form2.name.label }} 
