@@ -18,6 +18,7 @@ Then copy and paste the link provided to your browser, and your app will be
 visible and easy to navigate through. 
 
 Link to GitHub repo: https://github.com/rebecaaaaa/cst205project.git
+Trello: https://trello.com/b/Bf4o23h3/cst205team23
 
 ## Future Work: 
 This project would hopefully expand to include more creative graphic 

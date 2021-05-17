@@ -12,6 +12,7 @@
 ##Authors: Alexia Leon Lopez, Rebeca Chavez, Stephanie Hernandez
 ##Date: Apr. 28th 2021
 ##Estimate: 20 Hours
+# Link to GitHub repo: https://github.com/rebecaaaaa/cst205project.git
 
 # Stephanie H. - code 52-87, 97-133, 143-148, 161-168
 
