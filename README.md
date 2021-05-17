@@ -1,7 +1,11 @@
 Project Title: Hot Girlz Careers Flask App
+
 Team: Stephanie Hernandez, Rebeca Chavez, Alexia Leon Lopez
+
 Class: CST205
+
 Date: 05/17/2021
+
 Instructions: In order to run this app, it is best to have a virtual 
 environment set up. Once you have all required documents in a directory,
 run the Flask App on your terminal. The python file you will need to run is AppRoutes.py
